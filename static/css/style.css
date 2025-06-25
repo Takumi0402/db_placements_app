@@ -1,12 +1,37 @@
 body {
   font-family: sans-serif;
   margin: 20px;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
+  color: #333;
 }
 
-#layout-info {
+h1,
+h2 {
+  text-align: center;
+}
+
+/* 部屋のコンテナのスタイル */
+#room-container {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  margin: 20px auto; /* 中央揃え */
+  position: relative; /* 家具を絶対位置で配置するための基準となります */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 家具のスタイル */
+.furniture-item {
+  background-color: #a9cce3; /* 家具の色 */
+  border: 1px solid #5499c7;
+  position: absolute; /* 部屋コンテナを基準に、座標で位置を指定します */
+  box-sizing: border-box; /* paddingとborderをwidth/heightに含める */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #1a5276;
+  cursor: grab; /* ドラッグできることを示すカーソル */
+  /* ★追加: テキスト選択を無効化 */
+  user-select: none;
+  -webkit-user-select: none;
 }
